@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textViewReminderAt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reminder At"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:paddingBottom="8dp" />
+
+    <Spinner
+        android:id="@+id/spinnerReminderAt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:entries="@array/reminder_at_options" />
+
+    <TextView
+        android:id="@+id/textViewReminderType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reminder Type"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp" />
+
+    <Spinner
+        android:id="@+id/spinnerReminderType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:entries="@array/reminder_type_options" />
+
+    <TextView
+        android:id="@+id/textViewRepeat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Repeat"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp" />
+
+    <Spinner
+        android:id="@+id/spinnerRepeat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:entries="@array/repeat_options" />
+
+</LinearLayout>

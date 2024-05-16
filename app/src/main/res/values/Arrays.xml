@@ -1,0 +1,25 @@
+<resources>
+    <string-array name="reminder_at_options">
+        <item>1 minutes before</item>
+        <item>5 minutes before</item>
+        <item>10 minutes before</item>
+        <item>15 minutes before</item>
+        <item>30 minutes before</item>
+        <item>1 hour before</item>
+        <!-- Add more options as needed -->
+    </string-array>
+
+    <string-array name="reminder_type_options">
+        <item>Notification</item>
+        <!-- Add more options as needed -->
+    </string-array>
+
+    <string-array name="repeat_options">
+        <item>Hourly</item>
+        <item>Daily</item>
+        <item>Weekly</item>
+        <item>Monthly</item>
+        <item>Yearly</item>
+        <!-- Add more options as needed -->
+    </string-array>
+</resources>

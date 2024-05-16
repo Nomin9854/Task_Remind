@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bc1"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Magical Potion Menu"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:fontFamily="@raw/my_font"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Add Tasks Layout -->
+    <LinearLayout
+        android:id="@+id/addTasksLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/ibAddTasks"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="80dp"
+            android:contentDescription="Add Tasks Icon"
+            android:src="@drawable/ic_add_tasks" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Tasks"
+            android:fontFamily="@raw/my_font"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+
+    <!-- Current Tasks Layout -->
+    <LinearLayout
+        android:id="@+id/currentTasksLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addTasksLayout"
+        android:layout_marginTop="25dp"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/ibCurrentTasks"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_current_tasks"
+            android:contentDescription="Current Tasks Icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Current Tasks"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:fontFamily="@raw/my_font"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+
+    <!-- Calendar Layout -->
+    <LinearLayout
+        android:id="@+id/calendarLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/currentTasksLayout"
+        android:layout_marginTop="25dp"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/ibCalendar"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_calender"
+            android:contentDescription="Calendar Icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calendar"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:fontFamily="@raw/my_font"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+
+    <!-- Add Templates Layout -->
+    <LinearLayout
+        android:id="@+id/addTemplatesLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/calendarLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/ibAddTemplates"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_add_templates"
+            android:contentDescription="Add Templates Icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Templates"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:fontFamily="@raw/my_font"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+
+    <!-- Exit Button -->
+
+
+</RelativeLayout>
