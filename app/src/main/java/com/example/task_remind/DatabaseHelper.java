@@ -169,44 +169,5 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return templateList;
     }
 
-    public long insertTask(Task task) {
-        SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues values = new ContentValues();
-        values.put(COLUMN_TASK_NAME, task.getTaskName());
-        values.put(COLUMN_DUE_DATE, task.getDueDate());
-        values.put(COLUMN_DUE_TIME, task.getDueTime()); // Insert dueTime
-        values.put(COLUMN_REMINDER_AT, task.getReminderAt());
-        values.put(COLUMN_REMINDER_TYPE, task.getReminderType());
-        values.put(COLUMN_REPEAT, task.getRepeat());
-
-        long newRowId = db.insert(TABLE_NAME, null, values);
-        db.close();
-        return newRowId;
-    }
-
-    // Method to retrieve all tasks from the database
-    public List<Task> getAllTasks() {
-        List<Task> taskList = new ArrayList<>();
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_NAME, null);
-
-        if (cursor.moveToFirst()) {
-            do {
-                Task task = new Task();
-                task.setId(cursor.getInt(cursor.getColumnIndex(COLUMN_ID)));
-                task.setTaskName(cursor.getString(cursor.getColumnIndex(COLUMN_TASK_NAME)));
-                task.setDueDate(cursor.getString(cursor.getColumnIndex(COLUMN_DUE_DATE)));
-                task.setDueTime(cursor.getString(cursor.getColumnIndex(COLUMN_DUE_TIME))); // Get dueTime
-                task.setReminderAt(cursor.getString(cursor.getColumnIndex(COLUMN_REMINDER_AT)));
-                task.setReminderType(cursor.getString(cursor.getColumnIndex(COLUMN_REMINDER_TYPE)));
-                task.setRepeat(cursor.getString(cursor.getColumnIndex(COLUMN_REPEAT)));
-                taskList.add(task);
-            } while (cursor.moveToNext());
-        }
-
-        cursor.close();
-        db.close();
-        return taskList;
-    }
 
 }

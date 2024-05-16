@@ -25,10 +25,6 @@ public class AddTasksActivity extends AppCompatActivity {
     private EditText editTextTime;
     private Button buttonAddReminder;
 
-    private Button buttonSaveTask;
-
-    private DatabaseHelper databaseHelper;
-
     private Calendar calendar;
 
     @Override
@@ -64,33 +60,8 @@ public class AddTasksActivity extends AppCompatActivity {
             }
         });
 
-        buttonSaveTask.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                saveTaskToDatabase();
-            }
-        });
     }
-    private void saveTaskToDatabase() {
-        String taskName = editTextTaskName.getText().toString().trim();
-        String dueDate = editTextDate.getText().toString().trim();
-        String dueTime = editTextTime.getText().toString().trim();
 
-        if (taskName.isEmpty() || dueDate.isEmpty() || dueTime.isEmpty()) {
-            Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-        Task task = new Task(taskName, dueDate, dueTime);
-        long result = databaseHelper.insertTask(task);
-
-        if (result != -1) {
-            Toast.makeText(this, "Task saved successfully", Toast.LENGTH_SHORT).show();
-            finish(); // Close activity after saving task
-        } else {
-            Toast.makeText(this, "Failed to save task", Toast.LENGTH_SHORT).show();
-        }
-    }
     private void showDatePicker() {
         DatePickerDialog datePickerDialog = new DatePickerDialog(
                 this,
